@@ -1,35 +1,35 @@
 import React, { useState } from 'react';
-import TodoForm from './TodoForm';
-import Todo from './Todo';
+import ListaForm from './ListaForm';
+import ListaItem from './ListaItem';
 
 function TodoList() {
-  const [todos, setTodos] = useState([]);
+  const [lista, setLista] = useState([]);
 
-  const addTodo = todo => {
-    if (!todo.text || /^\s*$/.test(todo.text)) {
+  function addTodo(item){
+    //Isso aqui é para não preencher vazio
+    if (!item.text || /^\s*$/.test(item.text)) {
       return;
     }
-
     
-    const newTodos = [todo, ...todos];
+    const newLista = [item, ...lista];
 
-    setTodos(newTodos);  
+    setLista(newLista);  
   };
 
-  const removeTodo = id => {
-    const removedArr = [...todos].filter(todo => todo.id !== id);
+  function removeLista(id){
+    const newArray = [...lista].filter(item => item.id !== id);
 
-    setTodos(removedArr);
+    setLista(newArray);
   };
 
   return (
     <>
-      <h1>Lista de Itens</h1>
-      <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}        
-        removeTodo={removeTodo}        
-      />      
+      <h1>Minicurso React - Sua Lista</h1>      
+      <ListaForm onSubmit={addTodo} />
+      <ListaItem
+        todos={lista}        
+        removeLista={removeLista}        
+      />            
     </>
   );
 }

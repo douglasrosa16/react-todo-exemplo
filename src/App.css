@@ -9,7 +9,7 @@
 body {
   background: hsla(0, 0%, 85%, 0.808);
 }
-.todo-app {
+.lista-app {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -28,16 +28,11 @@ h1 {
   font-size: 24px;
 }
 
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
-
-.todo-form {
+.lista-form {
   margin-bottom: 32px;
 }
 
-.todo-input {
+.lista-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
   border: 2px solid rgb(17, 73, 255);
@@ -47,11 +42,11 @@ h1 {
   color: #fff;
 }
 
-.todo-input::placeholder {
+.lista-input::placeholder {
   color: #e2e2e2;
 }
 
-.todo-button {
+.lista-button {
   padding: 16px;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -62,17 +57,13 @@ h1 {
   text-transform: capitalize;
 }
 
-.todo-input.edit {
-  border: 2px solid #149fff;
-}
-
-.todo-container {
+.lista-container {
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
-.todo-row {
+.lista-caixinha {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +75,7 @@ h1 {
   width: 90%;
 }
 
-.icons {
+.icones {
   display: flex;
   align-items: center;
   font-size: 24px;
