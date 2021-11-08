@@ -8,6 +8,7 @@ const Todo = ({ todos, completeTodo, removeTodo }) => {
     value: ''
   }); 
 
+  
   return todos.map((todo, index) => (
     <div
       className={'todo-row'}
